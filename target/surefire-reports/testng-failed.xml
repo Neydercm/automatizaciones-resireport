@@ -3,13 +3,13 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.resireport.tests.EditarEstadoDenunciaTest">
+      <class name="com.resireport.tests.CambiarPrioridadDenunciaTest">
         <methods>
+          <include name="cambiarPrioridadDenuncia"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="editarEstadoDenunciaRegistrada"/>
         </methods>
-      </class> <!-- com.resireport.tests.EditarEstadoDenunciaTest -->
+      </class> <!-- com.resireport.tests.CambiarPrioridadDenunciaTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

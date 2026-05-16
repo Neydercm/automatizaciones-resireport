@@ -1,153 +1,111 @@
-````markdown
-# Automatizaciones ResiReport
+````md
+# Automatización QA - ResiReport
 
-Proyecto de automatización de pruebas funcionales para la plataforma ResiReport utilizando:
+Proyecto de automatización de pruebas funcionales utilizando Selenium WebDriver con Java para validar flujos críticos del sistema ResiReport.
+
+## Tecnologías Utilizadas
 
 - Java
 - Selenium WebDriver
-- TestNG
 - Maven
+- TestNG
+- Apache POI
 - Page Object Model (POM)
 
 ---
 
 # Estructura del Proyecto
 
-```text
-Automatizaciones/
-│
-├── src/
-│   └── test/
-│       ├── java/
-│       │   └── com/resireport/
-│       │       ├── pages/
-│       │       ├── tests/
-│       │       └── utils/
-│       │
-│       └── resources/
-│
-├── screenshots/
-├── target/
-├── pom.xml
-└── README.md
+```bash
+src
+└── test
+    └── java
+        └── com
+            └── resireport
+                ├── pages
+                ├── tests
+                └── utils
 ````
 
 ---
 
-# Tecnologías Utilizadas
+# Funcionalidades Automatizadas
 
-* Java 8+
-* Selenium 4
-* TestNG
-* Maven
-* WebDriverManager
-* Apache POI
+## 1. Login Administrador
 
----
+Automatización del inicio de sesión del administrador utilizando credenciales almacenadas en Excel.
 
-# Patrón de Diseño
+### Validaciones
 
-El proyecto utiliza el patrón:
-
-## Page Object Model (POM)
-
-Separando:
-
-* Tests
-* Pages
-* Utilidades
-* Configuración
+* Carga correcta del dashboard
+* Capturas automáticas
+* Esperas controladas
 
 ---
 
-# Automatizaciones Implementadas
+## 2. Cambio de Estado de Denuncia
 
-## 1. Login Residente
+### Flujo Automatizado
 
-### Objetivo
+1. Login administrador
+2. Identificar denuncia en estado "Registrada"
+3. Abrir detalles de la denuncia
+4. Validar estado actual
+5. Cambiar estado a "Analizando"
+6. Confirmar cambio en modal
+7. Validar actualización del estado
+8. Capturas de evidencia
 
-Validar el inicio de sesión de un usuario residente.
+### Validaciones Implementadas
 
-### Flujo
-
-* Abrir navegador
-* Ingresar credenciales
-* Iniciar sesión
-* Validar redirección
-* Capturar evidencia
-
-### Evidencias
-
-* Captura login
-* Captura dashboard
-
----
-
-## 2. Crear Denuncia
-
-### Objetivo
-
-Validar la creación de una denuncia por parte de un residente.
-
-### Flujo
-
-* Login residente
-* Navegar a crear denuncia
-* Completar formulario
-* Enviar denuncia
-* Validar creación exitosa
-* Capturas estratégicas
-
-### Evidencias
-
-* Formulario diligenciado
-* Denuncia creada
+* Estado inicial correcto
+* Modal de confirmación
+* Persistencia del cambio
+* Validación posterior al cambio
 
 ---
 
-## 3. Editar Estado de Denuncia
+## 3. Cambio de Prioridad de Denuncia
 
-### Objetivo
+### Flujo Automatizado
 
-Cambiar el estado de una denuncia desde “Registrada” a “Analizando”.
+1. Login administrador
+2. Identificar denuncia con prioridad "Sin asignar"
+3. Abrir detalles
+4. Validar prioridad actual
+5. Cambiar prioridad a "Baja"
+6. Refrescar página
+7. Validar actualización de prioridad
+8. Generar capturas de evidencia
 
-### Flujo
+### Validaciones Implementadas
 
-* Login administrador
-* Buscar denuncia registrada
-* Abrir detalle
-* Cambiar estado
-* Confirmar cambio
-* Validar actualización
-
-### Estado trabajado
-
-* Registrada
-* Analizando
-
-### Evidencias
-
-* Login admin
-* Tabla denuncias
-* Detalle denuncia
-* Modal confirmación
-* Estado actualizado
+* Validación prioridad inicial
+* Cambio exitoso de prioridad
+* Persistencia tras refresh
+* Validación prioridad final
 
 ---
 
-# Capturas Automáticas
+# Capturas de Evidencia
 
-El proyecto genera screenshots automáticos en:
+Las evidencias se almacenan automáticamente en:
 
-```text
+```bash
 /screenshots
 ```
 
-Con timestamp para trazabilidad.
+Ejemplo:
+
+```bash
+01_login_admin_20260516_013637.png
+02_dashboard_admin_20260516_013647.png
+03_prioridad_sin_asignar_20260516_013648.png
+```
 
 ---
 
-# Ejecución del Proyecto
+# Ejecución de Pruebas
 
 ## Ejecutar todas las pruebas
 
@@ -155,15 +113,9 @@ Con timestamp para trazabilidad.
 mvn test
 ```
 
-## Ejecutar prueba específica
+---
 
-```bash
-mvn test -Dtest=LoginTest
-```
-
-```bash
-mvn test -Dtest=CrearDenunciaTest
-```
+## Ejecutar prueba de cambio de estado
 
 ```bash
 mvn test -Dtest=EditarEstadoDenunciaTest
@@ -171,28 +123,44 @@ mvn test -Dtest=EditarEstadoDenunciaTest
 
 ---
 
-# Buenas Prácticas Aplicadas
+## Ejecutar prueba de cambio de prioridad
 
-* Esperas explícitas
-* Reutilización de componentes
-* Separación de responsabilidades
-* Evidencias automáticas
-* Código modular
-* Manejo de excepciones
-* Scroll automático
-* Click por JavaScript como fallback
+```bash
+mvn test -Dtest=CambiarPrioridadDenunciaTest
+```
 
 ---
 
-# Próximas Automatizaciones
+# Características Técnicas
 
-* Rechazar denuncia
-* Finalizar denuncia
-* Editar perfil
-* Gestión de usuarios
-* Búsquedas y filtros
-* Validaciones negativas
-* Exportación de reportes
-* Automatización de módulos administrativos
+* Arquitectura POM (Page Object Model)
+* Uso de Explicit Waits
+* Capturas automáticas
+* Datos externos desde Excel
+* Validaciones con TestNG
+* Automatización UI end-to-end
+* Manejo de modales
+* XPath dinámicos
 
 ---
+
+# Estado del Proyecto
+
+## Automatizaciones Completadas
+
+* ✅ Login administrador
+* ✅ Cambio de estado de denuncias
+* ✅ Cambio de prioridad de denuncias
+
+## Próximas Automatizaciones
+
+* ⏳ Filtrado de denuncias
+* ⏳ Creación de denuncias
+* ⏳ Búsqueda avanzada
+* ⏳ Gestión de usuarios
+* ⏳ Validaciones de formularios
+
+---
+
+```
+```

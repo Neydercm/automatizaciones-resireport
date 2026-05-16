@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-15T23:39:31 COT" name="Surefire suite" finished-at="2026-05-15T23:40:29 COT" duration-ms="57836">
+  <suite started-at="2026-05-16T02:37:20 COT" name="Surefire suite" finished-at="2026-05-16T02:38:00 COT" duration-ms="40276">
     <groups>
     </groups>
-    <test started-at="2026-05-15T23:39:31 COT" name="Surefire test" finished-at="2026-05-15T23:40:29 COT" duration-ms="57836">
-      <class name="com.resireport.tests.EditarEstadoDenunciaTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.resireport.tests.EditarEstadoDenunciaTest@7e0b85f9]" started-at="2026-05-15T23:39:31 COT" name="setUp" finished-at="2026-05-15T23:39:46 COT" duration-ms="15160" status="PASS">
+    <test started-at="2026-05-16T02:37:20 COT" name="Surefire test" finished-at="2026-05-16T02:38:00 COT" duration-ms="40276">
+      <class name="com.resireport.tests.CambiarPrioridadDenunciaTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.resireport.tests.CambiarPrioridadDenunciaTest@654f0d9c]" started-at="2026-05-16T02:37:20 COT" name="setUp" finished-at="2026-05-16T02:37:28 COT" duration-ms="8215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="editarEstadoDenunciaRegistrada()[pri:0, instance:com.resireport.tests.EditarEstadoDenunciaTest@7e0b85f9]" started-at="2026-05-15T23:39:46 COT" name="editarEstadoDenunciaRegistrada" finished-at="2026-05-15T23:40:28 COT" duration-ms="41577" status="PASS">
+        <test-method signature="cambiarPrioridadDenuncia()[pri:0, instance:com.resireport.tests.CambiarPrioridadDenunciaTest@654f0d9c]" started-at="2026-05-16T02:37:28 COT" name="cambiarPrioridadDenuncia" finished-at="2026-05-16T02:37:57 COT" duration-ms="28849" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- editarEstadoDenunciaRegistrada -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.resireport.tests.EditarEstadoDenunciaTest@7e0b85f9]" started-at="2026-05-15T23:40:28 COT" name="tearDown" finished-at="2026-05-15T23:40:29 COT" duration-ms="967" status="PASS">
+        </test-method> <!-- cambiarPrioridadDenuncia -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.resireport.tests.CambiarPrioridadDenunciaTest@654f0d9c]" started-at="2026-05-16T02:37:57 COT" name="tearDown" finished-at="2026-05-16T02:38:00 COT" duration-ms="3013" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.resireport.tests.EditarEstadoDenunciaTest -->
+      </class> <!-- com.resireport.tests.CambiarPrioridadDenunciaTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

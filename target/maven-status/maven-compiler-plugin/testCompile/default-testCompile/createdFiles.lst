@@ -1,7 +1,9 @@
 com\resireport\pages\EstadoDenunciaPage.class
 com\resireport\pages\EditarEstadoDenunciaPage.class
 com\resireport\pages\LoginPage.class
+com\resireport\tests\CambiarPrioridadDenunciaTest.class
 com\resireport\tests\CrearDenunciaTest.class
+com\resireport\pages\CambiarPrioridadDenunciaPage.class
 com\resireport\tests\LoginTest.class
 com\resireport\utils\ExcelUtil.class
 com\resireport\utils\ScreenshotUtil.class

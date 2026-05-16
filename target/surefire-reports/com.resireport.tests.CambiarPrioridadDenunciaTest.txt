@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.resireport.tests.CambiarPrioridadDenunciaTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.09 s -- in com.resireport.tests.CambiarPrioridadDenunciaTest
