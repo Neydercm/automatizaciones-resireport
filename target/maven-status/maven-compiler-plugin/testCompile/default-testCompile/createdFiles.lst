@@ -1,0 +1,10 @@
+com\resireport\pages\EstadoDenunciaPage.class
+com\resireport\pages\EditarEstadoDenunciaPage.class
+com\resireport\pages\LoginPage.class
+com\resireport\tests\CrearDenunciaTest.class
+com\resireport\tests\LoginTest.class
+com\resireport\utils\ExcelUtil.class
+com\resireport\utils\ScreenshotUtil.class
+com\resireport\pages\DenunciaPage.class
+com\resireport\tests\EditarEstadoDenunciaTest.class
+com\resireport\tests\BaseTest.class
